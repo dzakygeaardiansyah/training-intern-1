@@ -3,8 +3,8 @@ import { FC } from "react";
 interface props {
     placeholder: string;
     type: 'text' | 'password';
-    value: string;
-    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    value?: string;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const Input: FC<props> = ({ type, placeholder, value, onChange }) => {

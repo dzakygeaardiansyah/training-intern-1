@@ -1,7 +1,7 @@
 
 import mainBg from '../assets/bg.png';
 import '../App.css';
-import Input from '../components/input';
+import Input from '../components/Input';
 import Button from '../components/Button';
 import { useNavigate } from 'react-router-dom';
 

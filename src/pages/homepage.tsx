@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Button from "../components/Button";
-import Input from "../components/input";
 import * as math from "mathjs";
+import Input from "../components/Input";
 const calculatorButton = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
 const HomePage: React.FC = () => {
