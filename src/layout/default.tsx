@@ -19,7 +19,7 @@ const DefaultLayout = () => {
                 <div className='flex-grow'>
                     <Outlet />
                 </div>
-                <div className='bg-white h-[150px]'>Footer bar</div>
+                <div className='bg-white h-[80px]'>Footer bar</div>
             </div>
         </div>
     )
