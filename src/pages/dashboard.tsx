@@ -245,7 +245,7 @@ const DashboardPage: React.FC = () => {
     const DashboardTb: React.FC = () => {
         return (
             <div className="bg-[#273142] p-4">
-                <div className="flex flex-col gap-2 text-nowrap ">
+                <div className="flex flex-row gap-2 text-nowrap ">
                     {dummyTableData.map((item) => (
                         <DashboardTable key={item.key} dataTable={item} />
                     ))}

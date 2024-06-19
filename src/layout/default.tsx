@@ -5,7 +5,7 @@ import ButtonMenu from '../components/Menu';
 
 const DefaultLayout = () => {
     const handleSubmit = () => {
-        navigate("/login");
+        navigate("/db");
     };
     const navigate = useNavigate();
     return (
