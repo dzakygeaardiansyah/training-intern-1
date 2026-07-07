@@ -33,3 +33,20 @@ jobs:
 
       - name: Build Project
         run: pnpm build
+            - name: Deploy Build Files
+        shell: powershell
+        run: |
+          $destination = "C:\deploy\training-intern"
+
+          if (!(Test-Path $destination)) {
+            New-Item -ItemType Directory -Path $destination | Out-Null
+          }
+
+          Remove-Item "$destination\*" -Recurse -Force -ErrorAction SilentlyContinue
+
+          Copy-Item -Path "dist\*" -Destination $destination -Recurse -Force
+          
+      - name: Restart PM2
+        shell: powershell
+        run: |
+          pm2 restart training-intern  
