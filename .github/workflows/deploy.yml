@@ -33,7 +33,7 @@ jobs:
 
       - name: Build Project
         run: pnpm build
-            - name: Deploy Build Files
+      - name: Deploy Build Files
         shell: powershell
         run: |
           $destination = "C:\deploy\training-intern"
@@ -45,7 +45,7 @@ jobs:
           Remove-Item "$destination\*" -Recurse -Force -ErrorAction SilentlyContinue
 
           Copy-Item -Path "dist\*" -Destination $destination -Recurse -Force
-          
+
       - name: Restart PM2
         shell: powershell
         run: |
