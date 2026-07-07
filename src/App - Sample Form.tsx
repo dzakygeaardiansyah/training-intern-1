@@ -35,8 +35,8 @@ const App = () => {
             color: 'white',
           }}
         />
-        <Button input="Login" />
-        <Button input="Register" />
+        <Button children="Login" onPencet={handleSubmit} />
+        <Button children="Register" onPencet={handleSubmit} />
       </div>
     </div>
   );
