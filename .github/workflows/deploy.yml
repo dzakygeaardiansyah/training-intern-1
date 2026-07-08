@@ -46,18 +46,7 @@ jobs:
 
           Copy-Item -Path "dist\*" -Destination $destination -Recurse -Force
 
-      - name: Start or Restart PM2
+      - name: Restart PM2
         shell: powershell
         run: |
-          $app = pm2 jlist | ConvertFrom-Json | Where-Object { $_.name -eq "training-intern" }
-
-          if ($app) {
-            Write-Host "Restarting PM2..."
-            pm2 restart training-intern
-          }
-          else {
-            Write-Host "Starting PM2..."
-            pm2 start ecosystem.config.cjs
-          }
-
-          pm2 save 
+          pm2 restart training-intern || pm2 start ecosystem.config.cjs
